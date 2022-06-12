@@ -45,5 +45,8 @@ public class MethodRef {
         List<String> list = listUnaryOperatorMethodRef.apply(List.of("Hello", "World"));
 
 
+        BiPredicate<String, String> biPredicate = String::startsWith;
+        System.out.println(biPredicate.test("Hello", "H"));
+
     }
 }

@@ -65,9 +65,11 @@ public class GenericExample {
          *
          */
 
-        List<?> list = new ArrayList<>(List.of("hello"));// unbounded wildcard
+        List<?> list = List.of("hello");// unbounded wildcard
         // list.add("hello");// list is immutable for unbounded and upper bounded wildcards
         // list.set(0, "world");// cannot replace either (immutable)
+
+        // list.removeIf(String::isEmpty);  // cannot use bc ? is Object
         list.remove(0);// technically can remove but cannot add
 
         List<? extends CharSequence> list1 = new ArrayList<String>();// wildcard with UPPER bound

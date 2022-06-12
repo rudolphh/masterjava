@@ -1,7 +1,6 @@
 package com.rudyah.collections;
 
 import java.util.*;
-import java.util.function.Consumer;
 
 public class Framework {
 
@@ -60,11 +59,11 @@ public class Framework {
         System.out.println("linkedListQueue size() : " + linkedListQueue.size());
         linkedListQueue.offer(12);
         linkedListQueue.offer(500);
+        linkedListQueue.remove(15);// Queue does not remove by index so autoboxes 15 (Integer.valueOf(15))
         System.out.println("linkedListQueue peek() : " + linkedListQueue.peek());// 12
         System.out.println("linkedListQueue poll() : " + linkedListQueue.poll());// 12
         System.out.println("linkedListQueue poll() : " + linkedListQueue.poll());// 500
         System.out.println("linkedListQueue peek() : " + linkedListQueue.peek());// null
-
 
         /**
          *  Set Interface
